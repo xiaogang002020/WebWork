@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>相册轮播</title>
+    <style>
+                 
+        h1.pos_abs {
+            position: absolute;
+            left: 480px;
+        }
+
+        ul {
+            position: absolute;
+            top: 100px;
+        }
+        img {
+            width:600px;
+            height:500px;
+        }
+        li {
+            width: 600px;
+            height: 500px;
+            float: left;
+            overflow: hidden;
+            list-style: none;
+        }
+    </style>
+    <script src="Scripts/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ul li").mouseover(function () {
+                $(this).stop().animate({ width:"600px" }, 500)
+                $(this).siblings().stop().animate({ width:"100px" }, 500)
+            })
+        })
+    </script>
+    
+</head>
+<body>
+    <div id="div">
+        <h1 class="pos_abs">军训时光</h1>
+        <ul>
+            <li style="width: 350px"><img src="./1.jpeg"></li>
+            <li><img src="./2.jpeg"></li>
+            <li><img src="./3.jpeg"></li>
+            <li><img src="./4.jpeg"></li>
+            <li><img src="./5.jpeg"></li>
+            <li><img src="./6.jpeg"></li>
+        </ul>
+    </div>
+</body>
+</html>
