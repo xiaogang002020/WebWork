@@ -37,4 +37,17 @@ public partial class eight_Shopping_ViewList : System.Web.UI.Page
             }
         }
     }
+
+    protected void btnClear_Click(object sender, EventArgs e)
+    {
+        Session.Remove("list");
+        lblMsg.Text = "没有点任何菜！";
+        chklsGreens.Visible = false;
+        btnClear.Enabled = false;
+    }
+
+    protected void btnContinue_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Onepage.aspx");
+    }
 }

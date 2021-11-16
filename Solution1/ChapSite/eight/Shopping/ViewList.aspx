@@ -10,10 +10,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+            <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label><br />
             <asp:CheckBoxList ID="chklsGreens" runat="server"></asp:CheckBoxList>
-            <asp:Button ID="btnClear" runat="server" Text="清空购物车" />
-            <asp:Button ID="btnContinue" runat="server" Text="继续购物" />
+            <asp:Button ID="btnClear" runat="server" Text="清空点菜单" OnClick="btnClear_Click" /><br/>
+            <asp:Button ID="btnContinue" runat="server" Text="继续点菜" OnClick="btnContinue_Click" />
         </div>
     </form>
 </body>
